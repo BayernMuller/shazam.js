@@ -14,5 +14,5 @@ const buffer = fs.readFileSync(filePath)
 const vibra = new Vibra();
 vibra.on('initialized', () => {
     const signature = vibra.getSignature(buffer);
-    console.log(signature);
+    console.log(signature.uri);
 });
