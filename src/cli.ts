@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { Vibra } from ".";
+import { Shazam } from "./shazam";
 import fs from 'fs'
 
 if (process.argv.length < 3) {
@@ -14,5 +15,7 @@ const buffer = fs.readFileSync(filePath)
 const vibra = new Vibra();
 vibra.on('initialized', () => {
     const signature = vibra.getSignature(buffer);
-    console.log(signature.uri);
+    Shazam.recognize(signature).then((result) => {
+        console.log(JSON.stringify(result, null, 4));
+    });
 });
