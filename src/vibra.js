@@ -1991,6 +1991,8 @@ var wasmImports = {
 var wasmExports = createWasm();
 var ___wasm_call_ctors = createExportWrapper('__wasm_call_ctors');
 var _GetSignature = Module['_GetSignature'] = createExportWrapper('GetSignature');
+var _GetFingerprint = Module['_GetFingerprint'] = createExportWrapper('GetFingerprint');
+var _GetSampleMs = Module['_GetSampleMs'] = createExportWrapper('GetSampleMs');
 var _main = createExportWrapper('main');
 var _malloc = Module['_malloc'] = createExportWrapper('malloc');
 var _free = Module['_free'] = createExportWrapper('free');
